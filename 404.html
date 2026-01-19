@@ -1,16 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>404 - Not Found</title>
-    <style>
-        body { background: #9fb46c; color: white; text-align: center; padding-top: 100px; font-family: sans-serif; }
-        a { color: white; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Not Found | MANIPURA SIA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-    <h1>404</h1>
-    <p>Page not found. This path doesn't exist.</p>
-    <a href="index.html">Return Home</a>
+
+  <!-- NAV (共享) -->
+  <nav class="site-nav" role="navigation" aria-label="Primary">
+    <div class="nav-left">
+      <a href="index.html" class="btn-glass" data-i18n="nav.home">
+        <i class="fa-solid fa-house"></i><span>Home</span>
+      </a>
+    </div>
+
+    <div class="nav-center">
+      <span class="company-name">MANIPURA SIA</span>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-actions">
+        <a href="product.html" class="btn-glass" data-i18n="nav.product">
+          <i class="fa-solid fa-bag-shopping"></i><span>Product</span>
+        </a>
+        <a href="about.html" class="btn-glass" data-i18n="nav.about">
+          <i class="fa-solid fa-circle-info"></i><span>About</span>
+        </a>
+
+        <div class="lang">
+          <button class="btn-glass lang-btn" id="langBtn" type="button" aria-haspopup="menu" aria-expanded="false">
+            <span class="lang-flag" id="currentFlag" aria-hidden="true">🇬🇧</span>
+            <span class="lang-code" id="currentLangLabel">EN</span>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="lang-menu" id="langMenu" role="menu" aria-label="Language menu"></div>
+        </div>
+      </div>
+
+      <button class="nav-burger btn-glass" type="button" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-card">
+      <div class="mobile-drawer-header">
+        <span class="mobile-title">MANIPURA SIA</span>
+        <button class="btn-glass" type="button" id="drawerClose" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="mobile-drawer-actions">
+        <a href="index.html" class="btn-glass" data-i18n="nav.home">
+          <i class="fa-solid fa-house"></i><span>Home</span>
+        </a>
+        <a href="product.html" class="btn-glass" data-i18n="nav.product">
+          <i class="fa-solid fa-bag-shopping"></i><span>Product</span>
+        </a>
+        <a href="about.html" class="btn-glass" data-i18n="nav.about">
+          <i class="fa-solid fa-circle-info"></i><span>About</span>
+        </a>
+
+        <div class="mobile-lang">
+          <div class="mobile-lang-title" data-i18n="nav.language">Language</div>
+          <div class="mobile-lang-list" id="mobileLangList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-wrap">
+    <section class="page-card center">
+      <div class="error-code">404</div>
+      <h1 data-i18n="notfound.title">Page not found</h1>
+      <p data-i18n="notfound.desc">This path doesn’t exist. Please go back home.</p>
+
+      <div class="page-actions">
+        <a href="index.html" class="btn-glass">
+          <i class="fa-solid fa-house"></i>
+          <span data-i18n="notfound.back">Return Home</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> MANIPURA SIA</span>
+      <span class="footer-dot">·</span>
+      <span data-i18n="footer.made">Made for Europe</span>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast">Copied to clipboard!</div>
+  <script src="js/script.js"></script>
 </body>
 </html>

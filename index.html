@@ -3,66 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MANIPURA SIA | Official</title>
+    <title>MANIPURA SIA</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="home">
 
     <nav>
         <div class="nav-left">
-            <div class="btn-glass" onclick="copyContact()">
-                <i class="fas fa-envelope"></i>
-                <span>Contact Us</span>
-            </div>
+            <a href="index.html" class="btn-glass icon-only"><i class="fas fa-home"></i></a>
         </div>
-        
         <div class="nav-center">
-            <span class="company-name">MANIPURA SIA</span>
+            <span class="brand-name">MANIPURA SIA  -  Sarsumir</span>
         </div>
-
         <div class="nav-right">
-            <a href="about.html" class="btn-glass">About</a>
+            <div class="desktop-links" style="display:flex; gap:10px; align-items:center;">
+                <a href="product.html" class="btn-glass" data-i18n="nav.product">Product</a>
+                <a href="about.html" class="btn-glass" data-i18n="nav.about">About</a>
+            </div>
+            
+            <div class="lang-dropdown">
+                <button class="btn-glass" id="langBtn">
+                    <span id="currentFlag" class="flag">🇬🇧</span> <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="lang-menu" id="langMenu">
+                    <div class="lang-option" data-lang="en"><span class="flag">🇬🇧</span> English</div>
+                    <div class="lang-option" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</div>
+                    <div class="lang-option" data-lang="fr"><span class="flag">🇫🇷</span> Français</div>
+                    <div class="lang-option" data-lang="es"><span class="flag">🇪🇸</span> Español</div>
+                    <div class="lang-option" data-lang="it"><span class="flag">🇮🇹</span> Italiano</div>
+                </div>
+            </div>
+
+            <button class="btn-glass mobile-menu-btn" id="burger"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
-    <div class="hero-carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item" style="background-image: url('img/1.jpg');"></div>
-            <div class="carousel-item" style="background-image: url('img/2.jpg');"></div>
-            <div class="carousel-item" style="background-image: url('img/3.jpg');"></div>
-            <div class="carousel-item" style="background-image: url('img/1.jpg');"></div>
-        </div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a href="index.html" class="btn-glass" data-i18n="nav.home">Home</a>
+        <a href="product.html" class="btn-glass" data-i18n="nav.product">Product</a>
+        <a href="about.html" class="btn-glass" data-i18n="nav.about">About</a>
     </div>
 
-    <section class="content-section">
-        <div class="grid-container">
-            <div class="video-card">
-				<h3 class="video-title">English</h3>
-				<div class="video-wrapper">
-					<video src="video/English.mp4" controls preload="metadata"></video>
-				</div>
-			</div>
-            <div class="video-card">
-                <h3 class="video-title">German</h3>
-                <video src="video/German.mp4" controls playsinline></video>
-            </div>
-            <div class="video-card">
-                <h3 class="video-title">spanish</h3>
-                <video src="video/spanish.mp4" controls playsinline></video>
-            </div>
-			<div class="video-card">
-                <h3 class="video-title">French</h3>
-                <video src="video/French.mp4" controls playsinline></video>
-            </div>
-			<div class="video-card">
-                <h3 class="video-title">Italian</h3>
-                <video src="video/Italian.mp4" controls playsinline></video>
+    <main class="page-main">
+
+        <div class="hero-carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item" style="background-image: url('img/1.jpg')"></div>
+                <div class="carousel-item" style="background-image: url('img/2.jpg')"></div>
+                <div class="carousel-item" style="background-image: url('img/3.jpg')"></div>
             </div>
         </div>
-    </section>
+		<p style="height: 4rem; color: #2d3e10;">	
+        <h2 style="text-align:center; color: #2d3e10;" data-i18n="hero.title">Video Introductions</h2>
+        <p style="height: 1rem; color: #2d3e10;">
+        <div class="video-grid">
+            <div class="video-card">
+                <h3>English</h3>
+                <video controls preload="metadata" playsinline>
+                    <source src="video/English.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-card">
+                <h3>Deutsch</h3>
+                <video controls preload="metadata" playsinline>
+                    <source src="video/German.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-card">
+                <h3>Español</h3>
+                <video controls preload="metadata" playsinline>
+                    <source src="video/spanish.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-card">
+                <h3>Français</h3>
+                <video controls preload="metadata" playsinline>
+                    <source src="video/French.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-card">
+                <h3>Italian</h3>
+                <video controls preload="metadata" playsinline>
+                    <source src="video/Italian.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
 
-    <div id="toast" class="toast">Copied to clipboard!</div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="brand-name" style="color:white; margin-bottom:10px;">MANIPURA SIA</div>
+                <p data-i18n="footer.desc">Premium aesthetic experiences tailored for the European market.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="about.html">Contact</a>
+                <p>Latvia</p>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2026 MANIPURA SIA. All rights reserved.</div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
